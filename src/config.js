@@ -8,8 +8,8 @@ export const SURGE_SITE_RULE_SET_BASEURL = 'https://gh-proxy.com/https://github.
 export const SURGE_IP_RULE_SET_BASEURL = 'https://gh-proxy.com/https://github.com/NSZA156/surge-geox-rules/raw/refs/heads/release/geo/geoip/'
 // Custom rule URLs for Emby and TikTok
 export const CUSTOM_RULE_URLS = {
-    emby: 'https://raw.githubusercontent.com/jcyh6923/waha/main/emby.list',
-    tiktok: 'https://raw.githubusercontent.com/jcyh6923/waha/main/tiktok.list'
+    emby: 'https://raw.githubusercontent.com/jcyh6923/waha/main/emby.mrs',
+    tiktok: 'https://raw.githubusercontent.com/jcyh6923/waha/main/tiktok.mrs'
 };
 // Custom rules
 export const CUSTOM_RULES = [];
