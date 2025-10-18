@@ -6,156 +6,175 @@ export const CLASH_SITE_RULE_SET_BASE_URL = 'https://gh-proxy.com/https://github
 export const CLASH_IP_RULE_SET_BASE_URL = 'https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/';
 export const SURGE_SITE_RULE_SET_BASEURL = 'https://gh-proxy.com/https://github.com/NSZA156/surge-geox-rules/raw/refs/heads/release/geo/geosite/'
 export const SURGE_IP_RULE_SET_BASEURL = 'https://gh-proxy.com/https://github.com/NSZA156/surge-geox-rules/raw/refs/heads/release/geo/geoip/'
+// Custom rule URLs for Emby and TikTok
+export const CUSTOM_RULE_URLS = {
+    emby: 'https://gh-proxy.com/https://github.com/jcyh6923/waha/raw/refs/heads/main/emby.mrs',
+    tiktok: 'https://gh-proxy.com/https://github.com/jcyh6923/waha/raw/refs/heads/main/tiktok.mrs'
+};
 // Custom rules
 export const CUSTOM_RULES = [];
 // Unified rule structure
 export const UNIFIED_RULES = [
-	{
-		name: 'Ad Block',
-		outbound: t('outboundNames.Ad Block'),
-		site_rules: ['category-ads-all'],
-		ip_rules: []
-	},
-	{
-		name: 'AI Services',
-		outbound: t('outboundNames.AI Services'),
-		site_rules: ['category-ai-!cn',],
-		ip_rules: []
-	},
-	{
-		name: 'Bilibili',
-		outbound: t('outboundNames.Bilibili'),
-		site_rules: ['bilibili'],
-		ip_rules: []
-	},
-	{
-		name: 'Youtube',
-		outbound: t('outboundNames.Youtube'),
-		site_rules: ['youtube'],
-		ip_rules: []
-	},
-	{
-		name: 'Google',
-		outbound: t('outboundNames.Google'),
-		site_rules: ['google'],
-		ip_rules: ['google']
-	},
-	{
-		name: 'Private',
-		outbound: t('outboundNames.Private'),
-		site_rules: [],
-		ip_rules: ['private']
-	},
-	{
-		name: 'Location:CN',
-		outbound: t('outboundNames.Location:CN'),
-		site_rules: ['geolocation-cn','cn'],
-		ip_rules: ['cn']
-	},
-	{
-		name: 'Telegram',
-		outbound: t('outboundNames.Telegram'),
-		site_rules: [],
-		ip_rules: ['telegram']
-	},
-	{
-		name: 'Github',
-		outbound: t('outboundNames.Github'),
-		site_rules: ['github', 'gitlab'],
-		ip_rules: []
-	},
-	{
-		name: 'Microsoft',
-		outbound: t('outboundNames.Microsoft'),
-		site_rules: ['microsoft'],
-		ip_rules: []
-	},
-	{
-		name: 'Apple',
-		outbound: t('outboundNames.Apple'),
-		site_rules: ['apple'],
-		ip_rules: []
-	},
-	{
-		name: 'Social Media',
-		outbound: t('outboundNames.Social Media'),
-		site_rules: ['facebook', 'instagram', 'twitter', 'tiktok', 'linkedin'],
-		ip_rules: []
-	},
-	{
-		name: 'Streaming',
-		outbound: t('outboundNames.Streaming'),
-		site_rules: ['netflix', 'hulu', 'disney', 'hbo', 'amazon','bahamut'],
-		ip_rules: []
-	},
-	{
-		name: 'Gaming',
-		outbound: t('outboundNames.Gaming'),
-		site_rules: ['steam', 'epicgames', 'ea', 'ubisoft', 'blizzard'],
-		ip_rules: []
-	},
-	{
-		name: 'Education',
-		outbound: t('outboundNames.Education'),
-		site_rules: ['coursera', 'edx', 'udemy', 'khanacademy', 'category-scholar-!cn'],
-		ip_rules: []
-	},
-	{
-		name: 'Financial',
-		outbound: t('outboundNames.Financial'),
-		site_rules: ['paypal', 'visa', 'mastercard','stripe','wise'],
-		ip_rules: []
-	},
-	{
-		name: 'Cloud Services',
-		outbound: t('outboundNames.Cloud Services'),
-		site_rules: ['aws', 'azure', 'digitalocean', 'heroku', 'dropbox'],
-		ip_rules: []
-	},
-	{
-		name: 'Non-China',
-		outbound: t('outboundNames.Non-China'),
-		site_rules: ['geolocation-!cn'],
-		ip_rules: []
-	}
+    {
+        name: 'Ad Block',
+        outbound: t('outboundNames.Ad Block'),
+        site_rules: ['category-ads-all'],
+        ip_rules: []
+    },
+    {
+        name: 'AI Services',
+        outbound: t('outboundNames.AI Services'),
+        site_rules: ['category-ai-!cn',],
+        ip_rules: []
+    },
+    {
+        name: 'Bilibili',
+        outbound: t('outboundNames.Bilibili'),
+        site_rules: ['bilibili'],
+        ip_rules: []
+    },
+    {
+        name: 'Youtube',
+        outbound: t('outboundNames.Youtube'),
+        site_rules: ['youtube'],
+        ip_rules: []
+    },
+    {
+        name: 'Google',
+        outbound: t('outboundNames.Google'),
+        site_rules: ['google'],
+        ip_rules: ['google']
+    },
+    {
+        name: 'Private',
+        outbound: t('outboundNames.Private'),
+        site_rules: [],
+        ip_rules: ['private']
+    },
+    {
+        name: 'Location:CN',
+        outbound: t('outboundNames.Location:CN'),
+        site_rules: ['geolocation-cn','cn'],
+        ip_rules: ['cn']
+    },
+    {
+        name: 'Telegram',
+        outbound: t('outboundNames.Telegram'),
+        site_rules: [],
+        ip_rules: ['telegram']
+    },
+    {
+        name: 'Github',
+        outbound: t('outboundNames.Github'),
+        site_rules: ['github', 'gitlab'],
+        ip_rules: []
+    },
+    {
+        name: 'Microsoft',
+        outbound: t('outboundNames.Microsoft'),
+        site_rules: ['microsoft'],
+        ip_rules: []
+    },
+    {
+        name: 'Apple',
+        outbound: t('outboundNames.Apple'),
+        site_rules: ['apple'],
+        ip_rules: []
+    },
+    {
+        name: 'Social Media',
+        outbound: t('outboundNames.Social Media'),
+        site_rules: ['facebook', 'instagram', 'twitter', 'tiktok', 'linkedin'],
+        ip_rules: []
+    },
+    {
+        name: 'Streaming',
+        outbound: t('outboundNames.Streaming'),
+        site_rules: ['netflix', 'hulu', 'disney', 'hbo', 'amazon','bahamut'],
+        ip_rules: []
+    },
+    {
+        name: 'Emby',
+        outbound: t('outboundNames.Emby'),
+        site_rules: ['emby'],
+        ip_rules: [],
+        custom_rule: true
+    },
+    {
+        name: 'TikTok',
+        outbound: t('outboundNames.TikTok'),
+        site_rules: ['tiktok'],
+        ip_rules: [],
+        custom_rule: true
+    },
+    {
+        name: 'Gaming',
+        outbound: t('outboundNames.Gaming'),
+        site_rules: ['steam', 'epicgames', 'ea', 'ubisoft', 'blizzard'],
+        ip_rules: []
+    },
+    {
+        name: 'Education',
+        outbound: t('outboundNames.Education'),
+        site_rules: ['coursera', 'edx', 'udemy', 'khanacademy', 'category-scholar-!cn'],
+        ip_rules: []
+    },
+    {
+        name: 'Financial',
+        outbound: t('outboundNames.Financial'),
+        site_rules: ['paypal', 'visa', 'mastercard','stripe','wise'],
+        ip_rules: []
+    },
+    {
+        name: 'Cloud Services',
+        outbound: t('outboundNames.Cloud Services'),
+        site_rules: ['aws', 'azure', 'digitalocean', 'heroku', 'dropbox'],
+        ip_rules: []
+    },
+    {
+        name: 'Non-China',
+        outbound: t('outboundNames.Non-China'),
+        site_rules: ['geolocation-!cn'],
+        ip_rules: []
+    }
 ];
 
 export const PREDEFINED_RULE_SETS = {
-	minimal: ['Location:CN', 'Private', 'Non-China'],
-	balanced: ['Location:CN', 'Private', 'Non-China','Github', 'Google', 'Youtube', 'AI Services', 'Telegram'],
-	comprehensive: UNIFIED_RULES.map(rule => rule.name)
+    minimal: ['Location:CN', 'Private', 'Non-China'],
+    balanced: ['Location:CN', 'Private', 'Non-China','Github', 'Google', 'Youtube', 'AI Services', 'Telegram'],
+    comprehensive: UNIFIED_RULES.map(rule => rule.name)
   };
   
 
 
 // Generate SITE_RULE_SETS and IP_RULE_SETS from UNIFIED_RULES
 export const SITE_RULE_SETS = UNIFIED_RULES.reduce((acc, rule) => {
-	rule.site_rules.forEach(site_rule => {
-		acc[site_rule] = `geosite-${site_rule}.srs`;
-	});
-	return acc;
+    rule.site_rules.forEach(site_rule => {
+        acc[site_rule] = `geosite-${site_rule}.srs`;
+    });
+    return acc;
 }, {});
 
 export const IP_RULE_SETS = UNIFIED_RULES.reduce((acc, rule) => {
-	rule.ip_rules.forEach(ip_rule => {
-		acc[ip_rule] = `geoip-${ip_rule}.srs`;
-	});
-	return acc;
+    rule.ip_rules.forEach(ip_rule => {
+        acc[ip_rule] = `geoip-${ip_rule}.srs`;
+    });
+    return acc;
 }, {});
 
 // Generate CLASH_SITE_RULE_SETS and CLASH_IP_RULE_SETS for .mrs format
 export const CLASH_SITE_RULE_SETS = UNIFIED_RULES.reduce((acc, rule) => {
-	rule.site_rules.forEach(site_rule => {
-		acc[site_rule] = `${site_rule}.mrs`;
-	});
-	return acc;
+    rule.site_rules.forEach(site_rule => {
+        acc[site_rule] = `${site_rule}.mrs`;
+    });
+    return acc;
 }, {});
 
 export const CLASH_IP_RULE_SETS = UNIFIED_RULES.reduce((acc, rule) => {
-	rule.ip_rules.forEach(ip_rule => {
-		acc[ip_rule] = `${ip_rule}.mrs`;
-	});
-	return acc;
+    rule.ip_rules.forEach(ip_rule => {
+        acc[ip_rule] = `${ip_rule}.mrs`;
+    });
+    return acc;
 }, {});
 
 // Helper function to get outbounds based on selected rule names
@@ -170,42 +189,42 @@ export function getOutbounds(selectedRuleNames) {
 
 // Helper function to generate rules based on selected rule names
 export function generateRules(selectedRules = [], customRules = []) {
-	if (typeof selectedRules === 'string' && PREDEFINED_RULE_SETS[selectedRules]) {
-	  selectedRules = PREDEFINED_RULE_SETS[selectedRules];
-	}
+    if (typeof selectedRules === 'string' && PREDEFINED_RULE_SETS[selectedRules]) {
+      selectedRules = PREDEFINED_RULE_SETS[selectedRules];
+    }
   
-	if (!selectedRules || selectedRules.length === 0) {
-	  selectedRules = PREDEFINED_RULE_SETS.minimal;
-	}
+    if (!selectedRules || selectedRules.length === 0) {
+      selectedRules = PREDEFINED_RULE_SETS.minimal;
+    }
   
-	const rules = [];
+    const rules = [];
   
-	UNIFIED_RULES.forEach(rule => {
-	  if (selectedRules.includes(rule.name)) {
-		rules.push({
-		  site_rules: rule.site_rules,
-		  ip_rules: rule.ip_rules,
-		  domain_suffix: rule?.domain_suffix,
-		  ip_cidr: rule?.ip_cidr,
-		  outbound: rule.name
-		});
-	  }
-	});
+    UNIFIED_RULES.forEach(rule => {
+      if (selectedRules.includes(rule.name)) {
+        rules.push({
+          site_rules: rule.site_rules,
+          ip_rules: rule.ip_rules,
+          domain_suffix: rule?.domain_suffix,
+          ip_cidr: rule?.ip_cidr,
+          outbound: rule.name
+        });
+      }
+    });
   
-	customRules.reverse();
-	customRules.forEach((rule) => {
-		rules.unshift({
-			site_rules: rule.site.split(','),
-			ip_rules: rule.ip.split(','),
-			domain_suffix: rule.domain_suffix ? rule.domain_suffix.split(',') : [],
-			domain_keyword: rule.domain_keyword ? rule.domain_keyword.split(',') : [],
-			ip_cidr: rule.ip_cidr ? rule.ip_cidr.split(',') : [],
-			protocol: rule.protocol ? rule.protocol.split(',') : [],
-			outbound: rule.name
-		});
-		});
+    customRules.reverse();
+    customRules.forEach((rule) => {
+        rules.unshift({
+            site_rules: rule.site.split(','),
+            ip_rules: rule.ip.split(','),
+            domain_suffix: rule.domain_suffix ? rule.domain_suffix.split(',') : [],
+            domain_keyword: rule.domain_keyword ? rule.domain_keyword.split(',') : [],
+            ip_cidr: rule.ip_cidr ? rule.ip_cidr.split(',') : [],
+            protocol: rule.protocol ? rule.protocol.split(',') : [],
+            outbound: rule.name
+        });
+        });
   
-	return rules;
+    return rules;
   }
 
 
@@ -234,12 +253,16 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
   
 
 
-  const site_rule_sets = Array.from(siteRuleSets).map(rule => ({
-    tag: rule,
-    type: 'remote',
-    format: 'binary',
-    url: `${SITE_RULE_SET_BASE_URL}${SITE_RULE_SETS[rule]}`,
-  }));
+  const site_rule_sets = Array.from(siteRuleSets).map(rule => {
+    // Check if this is a custom rule (emby or tiktok)
+    const customUrl = CUSTOM_RULE_URLS[rule];
+    return {
+      tag: rule,
+      type: 'remote',
+      format: 'binary',
+      url: customUrl || `${SITE_RULE_SET_BASE_URL}${SITE_RULE_SETS[rule]}`,
+    };
+  });
 
   const ip_rule_sets = Array.from(ipRuleSets).map(rule => ({
     tag: `${rule}-ip`,
@@ -249,38 +272,38 @@ export function generateRuleSets(selectedRules = [], customRules = []) {
   }));
 
   if(!selectedRules.includes('Non-China')){
-	site_rule_sets.push({
-		tag: 'geolocation-!cn',
-		type: 'remote',
-		format: 'binary',
-		url: `${SITE_RULE_SET_BASE_URL}geosite-geolocation-!cn.srs`,
-	});
+    site_rule_sets.push({
+        tag: 'geolocation-!cn',
+        type: 'remote',
+        format: 'binary',
+        url: `${SITE_RULE_SET_BASE_URL}geosite-geolocation-!cn.srs`,
+    });
   }
 
   if(customRules){
-	customRules.forEach(rule => {
-		if(rule.site!=''){
-			rule.site.split(',').forEach(site => {
-				site_rule_sets.push({
-					tag: site.trim(),
-					type: 'remote',
-					format: 'binary',
-					url: `${SITE_RULE_SET_BASE_URL}geosite-${site.trim()}.srs`,
-				});
-			});
-		}
-		if(rule.ip!=''){
-			rule.ip.split(',').forEach(ip => {
-				ip_rule_sets.push({
-					tag: `${ip.trim()}-ip`,
-					type: 'remote',
-					format: 'binary',
-					url: `${IP_RULE_SET_BASE_URL}geoip-${ip.trim()}.srs`,
-				});
-			});
-		}
-	});
-	}
+    customRules.forEach(rule => {
+        if(rule.site!=''){
+            rule.site.split(',').forEach(site => {
+                site_rule_sets.push({
+                    tag: site.trim(),
+                    type: 'remote',
+                    format: 'binary',
+                    url: `${SITE_RULE_SET_BASE_URL}geosite-${site.trim()}.srs`,
+                });
+            });
+        }
+        if(rule.ip!=''){
+            rule.ip.split(',').forEach(ip => {
+                ip_rule_sets.push({
+                    tag: `${ip.trim()}-ip`,
+                    type: 'remote',
+                    format: 'binary',
+                    url: `${IP_RULE_SET_BASE_URL}geoip-${ip.trim()}.srs`,
+                });
+            });
+        }
+    });
+    }
 
   ruleSets.push(...site_rule_sets, ...ip_rule_sets);
 
@@ -313,11 +336,13 @@ export function generateClashRuleSets(selectedRules = [], customRules = []) {
   const ip_rule_providers = {};
 
   Array.from(siteRuleSets).forEach(rule => {
+    // Check if this is a custom rule (emby or tiktok)
+    const customUrl = CUSTOM_RULE_URLS[rule];
     site_rule_providers[rule] = {
       type: 'http',
       format: 'mrs',
       behavior: 'domain',
-      url: `${CLASH_SITE_RULE_SET_BASE_URL}${CLASH_SITE_RULE_SETS[rule]}`,
+      url: customUrl || `${CLASH_SITE_RULE_SET_BASE_URL}${CLASH_SITE_RULE_SETS[rule]}`,
       path: `./ruleset/${CLASH_SITE_RULE_SETS[rule]}`,
       interval: 86400
     };
@@ -383,93 +408,93 @@ export function generateClashRuleSets(selectedRules = [], customRules = []) {
 
 // Singbox configuration
 export const SING_BOX_CONFIG = {
-	dns: {
-		servers: [
-			{
-				type: "tcp",
-				tag: "dns_proxy",
-				server: "1.1.1.1",
-				detour: "🚀 节点选择",
-				domain_resolver: "dns_resolver"
-			},
-			{
-				type: "https",
-				tag: "dns_direct",
-				server: "dns.alidns.com",
-				domain_resolver: "dns_resolver"
-			},
-			{
-				type: "udp",
-				tag: "dns_resolver",
-				server: "223.5.5.5"
-			},
-			{
-				type: "fakeip",
-				tag: "dns_fakeip",
-				inet4_range: "198.18.0.0/15",
-				inet6_range: "fc00::/18"
-			}
-		],
-		rules: [
-			{
-				rule_set: "geolocation-!cn",
-				query_type: [
-					"A",
-					"AAAA"
-				],
-				server: "dns_fakeip"
-			},
-			{
-				rule_set: "geolocation-!cn",
-				query_type: "CNAME",
-				server: "dns_proxy"
-			},
-			{
-				query_type: [
-					"A",
-					"AAAA",
-					"CNAME"
-				],
-				invert: true,
-				action: "predefined",
-				rcode: "REFUSED"
-			}
-		],
-		final: "dns_direct",
-		independent_cache: true
-	},
-	ntp: {
-		enabled: true,
-		server: 'time.apple.com',
-		server_port: 123,
-		interval: '30m'
-	},
-	inbounds: [
-		{ type: 'mixed', tag: 'mixed-in', listen: '0.0.0.0', listen_port: 2080 },
-		{ type: 'tun', tag: 'tun-in', address: '172.19.0.1/30', auto_route: true, strict_route: true, stack: 'mixed', sniff: true }
-	],
-	outbounds: [
-		{ type: 'block', tag: 'REJECT' },
-		{ type: "direct", tag: 'DIRECT' }
-	],
-	route : {
-		default_domain_resolver: "dns_resolver",
-		"rule_set": [
+    dns: {
+        servers: [
+            {
+                type: "tcp",
+                tag: "dns_proxy",
+                server: "1.1.1.1",
+                detour: "🚀 节点选择",
+                domain_resolver: "dns_resolver"
+            },
+            {
+                type: "https",
+                tag: "dns_direct",
+                server: "dns.alidns.com",
+                domain_resolver: "dns_resolver"
+            },
+            {
+                type: "udp",
+                tag: "dns_resolver",
+                server: "223.5.5.5"
+            },
+            {
+                type: "fakeip",
+                tag: "dns_fakeip",
+                inet4_range: "198.18.0.0/15",
+                inet6_range: "fc00::/18"
+            }
+        ],
+        rules: [
+            {
+                rule_set: "geolocation-!cn",
+                query_type: [
+                    "A",
+                    "AAAA"
+                ],
+                server: "dns_fakeip"
+            },
+            {
+                rule_set: "geolocation-!cn",
+                query_type: "CNAME",
+                server: "dns_proxy"
+            },
+            {
+                query_type: [
+                    "A",
+                    "AAAA",
+                    "CNAME"
+                ],
+                invert: true,
+                action: "predefined",
+                rcode: "REFUSED"
+            }
+        ],
+        final: "dns_direct",
+        independent_cache: true
+    },
+    ntp: {
+        enabled: true,
+        server: 'time.apple.com',
+        server_port: 123,
+        interval: '30m'
+    },
+    inbounds: [
+        { type: 'mixed', tag: 'mixed-in', listen: '0.0.0.0', listen_port: 2080 },
+        { type: 'tun', tag: 'tun-in', address: '172.19.0.1/30', auto_route: true, strict_route: true, stack: 'mixed', sniff: true }
+    ],
+    outbounds: [
+        { type: 'block', tag: 'REJECT' },
+        { type: "direct", tag: 'DIRECT' }
+    ],
+    route : {
+        default_domain_resolver: "dns_resolver",
+        "rule_set": [
             {
                 "tag": "geosite-geolocation-!cn",
                 "type": "local",
                 "format": "binary",
                 "path": "geosite-geolocation-!cn.srs"
             }
-		],
-		rules: []
-	},
-	experimental: {
-		cache_file: {
-			enabled: true,
-			store_fakeip: true
-		}
-	}
+        ],
+        rules: []
+    },
+    experimental: {
+        cache_file: {
+            enabled: true,
+            store_fakeip: true
+        }
+    }
 };
 
 export const CLASH_CONFIG = {
@@ -520,7 +545,7 @@ export const CLASH_CONFIG = {
 };
 
 export const SURGE_CONFIG = {
-	'general': {
+    'general': {
         'allow-wifi-access': false,
         'wifi-access-http-port': 6152,
         'wifi-access-socks5-port': 6153,
