@@ -68,6 +68,13 @@ npm run deploy
 
 ## 📝 最近更新
 
+### 2025-10-18
+
+- [新功能] 添加 Emby 和 TikTok 自定义规则分流支持
+  - 集成来自 [jcyh6923/waha](https://github.com/jcyh6923/waha) 的规则集
+  - 支持 Singbox、Clash、Surge 三种配置格式
+  - 提供多语言界面支持（中文、英语、波斯语、俄语）
+
 ### 2025-05-02
 
 - 现在如果存在相同名称的代理，会自动进行重命名([#175](https://github.com/7Sageer/sublink-worker/pull/175))
