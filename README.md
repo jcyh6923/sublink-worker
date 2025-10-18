@@ -70,6 +70,13 @@ For detailed API documentation, please refer to [APIDoc.md](/docs/APIDoc.md)
 
 ## 📝 Recent Updates
 
+### 2025-10-18
+
+- [New Feature] Added Emby and TikTok custom routing rules support
+  - Integrated rule sets from [jcyh6923/waha](https://github.com/jcyh6923/waha)
+  - Support for Singbox, Clash, and Surge configuration formats
+  - Provides multi-language interface support (Chinese, English, Persian, Russian)
+
 ### 2025-09-28
 
 - Fixed warnings caused by some configurations in Singbox 1.12.0
