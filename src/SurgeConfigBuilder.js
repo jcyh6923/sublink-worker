@@ -1,5 +1,5 @@
 import { BaseConfigBuilder } from './BaseConfigBuilder.js';
-import { SURGE_CONFIG, SURGE_SITE_RULE_SET_BASEURL, SURGE_IP_RULE_SET_BASEURL, generateRules, getOutbounds, PREDEFINED_RULE_SETS } from './config.js';
+import { SURGE_CONFIG, SURGE_SITE_RULE_SET_BASEURL, SURGE_IP_RULE_SET_BASEURL, CUSTOM_RULE_URLS, generateRules, getOutbounds, PREDEFINED_RULE_SETS } from './config.js';
 import { t } from './i18n/index.js';
 
 export class SurgeConfigBuilder extends BaseConfigBuilder {
@@ -250,7 +250,10 @@ export class SurgeConfigBuilder extends BaseConfigBuilder {
 
         rules.filter(rule => rule.site_rules[0] !== '').map(rule => {
             rule.site_rules.forEach(site => {
-                finalConfig.push(`RULE-SET,${SURGE_SITE_RULE_SET_BASEURL}${site}.conf,${t('outboundNames.'+ rule.outbound)}`);
+                // Check if this is a custom rule (emby or tiktok)
+                const customUrl = CUSTOM_RULE_URLS[site];
+                const ruleUrl = customUrl || `${SURGE_SITE_RULE_SET_BASEURL}${site}.conf`;
+                finalConfig.push(`RULE-SET,${ruleUrl},${t('outboundNames.'+ rule.outbound)}`);
             });
         });
 
